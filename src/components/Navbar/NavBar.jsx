@@ -8,9 +8,9 @@ import CartWidget from './CartWidget'
 const NavBar = () => {
 
 const options = [
-  {id:0, title:'Inicio'},
-  {id:1, title:'Cartas'},
-  {id:2, title:'Pokemon'}
+  {id:0, title:'Inicio', URL: "#"},
+  {id:1, title:'Cartas', URL: "#"},
+  {id:2, title:'Pokedex', URL: "#"}
 ]
 
   return (
@@ -23,7 +23,7 @@ const options = [
             </button>
             <div className='flex-row-reverse collapse navbar-collapse' id='navbarNavAltMarkup'>
               <div className='navBarMod__a navbar-nav'>
-                {options.map( item =>(<a key={item.id} className='nav-link' href="#">{item.title}</a> ))}
+                {options.map( item =>(<a key={item.id} className='nav-link' href={item.URL}>{item.title}</a> ))}
                 <CartWidget />
               </div>
             </div>
@@ -31,7 +31,7 @@ const options = [
         </nav>
 
         <div className='contenedor'>
-          <div className='conenedor__texto'> 
+          <div className='contenedor__texto'> 
               <h1>POKEMON TRADING CARDS</h1>
               <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste, explicabo praesentium vel eligendi ratione sint nobis tenetur quos sequi, expedita atque aut quasi dicta temporibus sed neque dolorum? Exercitationem, beatae?</p>
           </div>
@@ -42,3 +42,4 @@ const options = [
 }
 
 export default NavBar
+

@@ -1,0 +1,99 @@
+
+  /* MENU */
+  .navBarMod {
+    background-color: black !important;
+  }
+  
+  .navBarMod__a a {
+    color: white;
+    margin: 0px 12px;
+  }
+  
+  .nav-link:hover {
+    color: #d60909;
+  }
+  
+  .nav-link:focus {
+    color: #d60909;
+  }
+  
+  .navBarMod__contador {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background: #d60909;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0px auto;
+    padding: 0.563rem;
+    position: absolute;
+    font-size: 0.625rem;
+    right: 1.063rem;
+    top:0.625rem;
+    font-weight: 400;
+    color: white;
+  }
+  
+  .navBarMod__logo {
+    animation: navbar__logo-spin 4000ms ease infinite;
+    animation-timing-function: linear;
+  }
+  
+  
+  .contenedor {
+    background-image: url(../../img/fondo.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: row-reverse;
+
+      &__texto {
+          width: 40%;
+          position: absolute;
+          top: 12.5rem;
+          left: 5rem;
+          color: white;
+          justify-content: center;
+          text-align: center;
+        }
+      
+      
+        &__texto h1 {
+          font-size: 3.5rem;
+          margin-bottom: 3rem;
+        }
+      
+      
+        &__img {
+          position: absolute;
+          max-width: 31.25rem;
+          right: 2.5rem;
+          top: 12.5rem;
+        }
+
+
+
+  }
+  
+  
+  .navBarMod__banner {
+      width: 100%;
+  }
+
+  @keyframes navbar__logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+  
+    to {
+      transform: rotate(360deg);
+    }
+  
+  }
+  
+  
+  

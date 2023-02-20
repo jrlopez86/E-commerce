@@ -1,0 +1,48 @@
+.boton {
+    display: flex;
+
+	&__count {
+		margin: 0 10px;
+		display: flex;
+		justify-content: center;
+		text-align: initial;
+		top: 6px;
+		position: relative;
+	}
+
+	&__carrito {
+		position: relative;
+		left: 5px;
+	}
+	
+}
+
+.cards {
+	display: flex;
+	flex-direction: column;
+	border: 3px solid hotpink;
+	padding: 20px;
+	border-radius: 25px;
+}
+
+.cards__titulo {
+	color: white;
+}
+
+.cards__precio {
+	color: white;
+}
+
+p {
+	color: white;
+}
+
+.boton__count {
+	color: white;
+}
+
+.cards__detalles{
+	margin-top: 8px;
+	position: relative;
+	left: 3px;
+  }
