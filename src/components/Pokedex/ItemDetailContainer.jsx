@@ -15,15 +15,6 @@ const getItem = () => {
   });
 };
 
-fetch(process.env.PUBLIC_URL + "/data.json")
-  .then(response => response.json())
-  .then(data => {
-    const productosCategoria = data.filter(producto => producto.id === id);
-    console.log(productosCategoria);
-  })
-  .catch(error => console.error(error));
-
-
 
 const ItemDetailContainer = () => {
 

@@ -1,27 +1,28 @@
- import React from 'react'
+import React from 'react'
+import { useParams } from 'react-router-dom';
 
 
 
 
- const ItemDetail = React.memo(({ pokedex }) => {
-  return (
-     <>
-     
-       {pokedex.map((poke) => (
-         <div key={poke.id} className='detalle' >
-           <img src={poke.img} alt={poke.name} />
-           <h3 className="detalle__titulo">Nombre: {poke.name}</h3>
-           <p className="detalle__parrafo">Tipo: {poke.type}</p>
-           <p className="detalle__parrafo">Hp: {poke.Hp}</p>
-           <p className="detalle__parrafo">Ataque: {poke.Attack}</p>
-           <p className="detalle__parrafo">Defensa: {poke.Defense}</p>
-           <p className="detalle__parrafo">V.ataque: {poke.SpAtk}</p>
-           <p className="detalle__parrafo">V.defensa: {poke.SpDef}</p>
-           <p className="detalle__parrafo">Velocidad: {poke.Speed}</p>
-         </div>
-       ))}
-     </>
-  );
-});
+const ItemDetail = ({ pokedex }) => {
+ const { id } = useParams();
+ const producto = pokedex.find(p => p.id === id);
 
- export default ItemDetail
+ return (
+   <>
+     <div key={producto.id} className='detalle' >
+       <img src={producto.img} alt={producto.name} />
+       <h3 className="detalle__titulo">Nombre: {producto.name}</h3>
+       <p className="detalle__parrafo">Tipo: {producto.type}</p>
+       <p className="detalle__parrafo">Hp: {producto.Hp}</p>
+       <p className="detalle__parrafo">Ataque: {producto.Attack}</p>
+       <p className="detalle__parrafo">Defensa: {producto.Defense}</p>
+       <p className="detalle__parrafo">V.ataque: {producto.SpAtk}</p>
+       <p className="detalle__parrafo">V.defensa: {producto.SpDef}</p>
+       <p className="detalle__parrafo">Velocidad: {producto.Speed}</p>
+     </div>
+   </>
+ );
+};
+export default ItemDetail
+
