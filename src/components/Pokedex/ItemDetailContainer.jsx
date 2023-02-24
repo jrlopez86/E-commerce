@@ -3,24 +3,48 @@ import ItemDetail from './ItemDetail'
 
 
 
-const ItemDetailContainer = () => {
 
+const getItem = () => {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      fetch(process.env.PUBLIC_URL + "/data.json")
+        .then(response => response.json())
+        .then(data => {  resolve(data); }
+        );
+    }, 2000);
+  });
+};
+
+fetch(process.env.PUBLIC_URL + "/data.json")
+  .then(response => response.json())
+  .then(data => {
+    const productosCategoria = data.filter(producto => producto.id === id);
+    console.log(productosCategoria);
+  })
+  .catch(error => console.error(error));
+
+
+
+const ItemDetailContainer = () => {
 
 const [pokedex, setPokedex] = useState([])
 
 useEffect(() => {
-  fetch('https://pokeapi.co/api/v2/pokemon?limit=9')
-  .then(response => response.json())
-  .then(dataJson => setPokedex(dataJson.results))
-}, [])
+  getItem().then((result) => {
+    setPokedex(result);
+  });
+}, []);
 
 
 
   return (
       <>
-      <ItemDetail pokedex={pokedex} />
+     <ItemDetail pokedex={pokedex} /> 
       </>
+      
   )
 }
 
 export default ItemDetailContainer
+
+

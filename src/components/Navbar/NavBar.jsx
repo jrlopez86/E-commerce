@@ -2,16 +2,14 @@ import React from 'react'
 import logo from '../../img/logo.png'
 import Banner from './Banner'
 import CartWidget from './CartWidget'
+import { Link } from 'react-router-dom'
+import { Link as ScrollLink  } from 'react-scroll';
 
 
 
 const NavBar = () => {
 
-const options = [
-  {id:0, title:'Inicio', URL: "#"},
-  {id:1, title:'Cartas', URL: "#"},
-  {id:2, title:'Pokedex', URL: "#"}
-]
+
 
   return (
       <header>
@@ -23,7 +21,18 @@ const options = [
             </button>
             <div className='flex-row-reverse collapse navbar-collapse' id='navbarNavAltMarkup'>
               <div className='navBarMod__a navbar-nav'>
-                {options.map( item =>(<a key={item.id} className='nav-link' href={item.URL}>{item.title}</a> ))}
+                <Link className='nav-link' to={'/'}>Inicio</Link>
+                <ScrollLink className='nav-link' activeClass='active' to='cartas' spy={true} smooth={true} offset={-1200} duration={500}>Cartas</ScrollLink >
+              <ul className="menu">
+                  <li><Link className='nav-link' to=''>Categoría</Link>
+                    <ul>
+                      <li><Link className='nav-link' to=''>Fuego</Link></li>
+                      <li><Link className='nav-link' to=''>Agua</Link></li>
+                      <li><Link className='nav-link' to=''>Planta</Link></li>
+                      <li><Link className='nav-link' to=''>Electrico</Link></li>
+                    </ul>
+                  </li>
+                </ul>
                 <CartWidget />
               </div>
             </div>

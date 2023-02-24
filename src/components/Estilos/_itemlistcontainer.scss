@@ -46,3 +46,49 @@ p {
 	position: relative;
 	left: 3px;
   }
+
+  .card {
+	position: relative;
+	background-color:  black;
+
+
+
+	perspective: 1000px;
+  }
+  
+  .card div {
+	backface-visibility: hidden;
+	border-radius: 10px;
+  }
+  
+  .card .front {
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	transform: rotateY(0deg);
+	transition: transform 0.6s ease-out;
+	z-index: 2;
+  }
+  
+  .card .back {
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	transform: rotateY(-180deg);
+	transition: transform 0.6s ease-out;
+
+
+  }
+  
+  .card.flipped .front {
+	transform: rotateY(180deg);
+  }
+  
+  .card.flipped .back {
+	transform: rotateY(0deg);
+
+  }
+
+
+  .back {
+	top: -455px;
+	position: relative;
+	/* width: ; */
+	height: 10px;
+}

@@ -1,0 +1,13 @@
+.detalle {
+	display: flex;
+	flex-direction: column;
+	border: 3px solid hotpink;
+	padding: 20px;
+	border-radius: 25px;
+    width: 296px;
+}
+
+.detalle__titulo {
+	font-size: 26px;
+    color: white;
+}
