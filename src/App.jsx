@@ -1,8 +1,9 @@
 import NavBar from './components/Navbar/NavBar';
-import Main from './components/Main/Main';
+import Main from './components/ItemListContainer/Main';
 import Footer from './components/Footer/Footer';
 import { BrowserRouter, Routes, Route} from 'react-router-dom';
-import ItemDetail from './components/Pokedex/ItemDetail';
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
+import Categorias from './components/Navbar/Categorias/Categorias'
 
 
 function App() {
@@ -12,9 +13,9 @@ function App() {
         <NavBar />
 
         <Routes>
-          <Route exact path='/' element={<Main />} />
-          <Route exact path="/ItemList/:prod.id" element={<ItemDetail />} />
-
+          <Route exact  path='/' element={<Main />} />
+          <Route exact path="/item/:id" element={<ItemDetailContainer />} />
+          <Route exact path="/categorias/:type" element={<Categorias />}/>
         </Routes>
 
         <Footer />

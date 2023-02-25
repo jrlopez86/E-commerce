@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import ItemCount from './ItemCount'
 import { Element } from 'react-scroll';
 import { Link } from 'react-router-dom'
 
@@ -25,9 +24,7 @@ const Item = ({prod}) => {
       <div className="front">
         <img src={prod.img} alt={prod.name} />
         <h3  className="cards__titulo">{prod.name}</h3>
-        <p>Precio <span className="cards__precio">${prod.price}</span></p>
-        <ItemCount stock= {prod.stock} initial= {0} />
-        <Link to={`/ItemListContainer/${prod.id}`}   onClick={handleButtonClick} className="cards__detalle btn btn-primary" type="text">Detalle de la carta</Link>
+        <Link to={`/item/${prod.id}`}   onClick={handleButtonClick} className="cards__detalle btn btn-primary" type="text">Detalle de la carta</Link>
       
       </div>
         <div className="back">

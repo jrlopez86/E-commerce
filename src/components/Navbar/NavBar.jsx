@@ -29,7 +29,7 @@ const NavBar = () => {
                       <li><Link className='nav-link' to=''>Fuego</Link></li>
                       <li><Link className='nav-link' to=''>Agua</Link></li>
                       <li><Link className='nav-link' to=''>Planta</Link></li>
-                      <li><Link className='nav-link' to=''>Electrico</Link></li>
+                      <li><Link className='nav-link' to=''>Insecto</Link></li>
                     </ul>
                   </li>
                 </ul>
