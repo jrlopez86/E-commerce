@@ -129,7 +129,7 @@ const products = [
   {
     id: 9,
     name: "Caterpie",
-    type: "Insecto",
+    type: "insecto",
     price: 80,
     img: "../../img/productos/caterpie.png",
     stock: 2,
@@ -143,7 +143,7 @@ const products = [
   {
     id: 10,
     name: "Metapod",
-    type: "Insecto",
+    type: "insecto",
     price: 21,
     img: "../../img/productos/metapod.png",
     stock: 5,
@@ -157,7 +157,7 @@ const products = [
   {
     id: 11,
     name: "Butterfree",
-    type: "Insecto",
+    type: "insecto",
     price: 63,
     img: "../../img/productos/butterfree.png",
     stock: 5,
