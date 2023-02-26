@@ -2,8 +2,10 @@ import React, { useState } from 'react'
 import { Element } from 'react-scroll';
 import { Link } from 'react-router-dom'
 
-const Item = ({prod}) => {
 
+
+
+const Item = ({prod}) => {
 
   const [isFlipped, setIsFlipped] = useState(false);
 

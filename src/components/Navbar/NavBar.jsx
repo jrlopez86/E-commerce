@@ -1,15 +1,24 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import logo from '../../img/logo.png'
 import Banner from './Banner'
 import CartWidget from './CartWidget'
-import { Link } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import { Link as ScrollLink  } from 'react-scroll';
+import { getProducts } from '../../data/data'
+
 
 
 
 const NavBar = () => {
 
-
+  const [tipo, setTipo] = useState({})
+  const {type}= useParams()
+  useEffect(() => {
+    getProducts()
+    .then(res => setTipo(res.filter((item)=> item.type === type)))
+  }, [type]);
+  
+  
 
   return (
       <header>
@@ -26,10 +35,10 @@ const NavBar = () => {
               <ul className="menu">
                   <li><Link className='nav-link' to=''>Categoría</Link>
                     <ul>
-                      <li><Link className='nav-link' to=''>Fuego</Link></li>
-                      <li><Link className='nav-link' to=''>Agua</Link></li>
-                      <li><Link className='nav-link' to=''>Planta</Link></li>
-                      <li><Link className='nav-link' to=''>Insecto</Link></li>
+                      <li><Link className='nav-link' to={`/categorias/${tipo.type}`}>Fuego</Link></li>
+                      <li><Link className='nav-link' to={`/categorias/${tipo.type}`}>Agua</Link></li>
+                      <li><Link className='nav-link' to={`/categorias/${tipo.type}`}>Planta</Link></li>
+                      <li><Link className='nav-link' to={`/categorias/${tipo.type}`}>Insecto</Link></li>
                     </ul>
                   </li>
                 </ul>

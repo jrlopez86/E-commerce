@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom'
 import ItemDetail from './ItemDetail'
 import { getProducts } from '../../data/data'
 
+
 const ItemDetailContainer = () => {
 
 const [poke, setPoke] = useState({})
@@ -17,6 +18,8 @@ useEffect(() => {
   return (
       <>
      <ItemDetail poke={poke} /> 
+    
+     
       </>
       
   )
