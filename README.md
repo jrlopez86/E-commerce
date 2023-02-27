@@ -1,6 +1,6 @@
 
 # Getting Started with Create React App
-
+[![Animation-1.gif](https://i.postimg.cc/zXyry1XQ/Animation-1.gif)](https://postimg.cc/hfRwY6m8)
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
