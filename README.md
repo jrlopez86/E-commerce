@@ -1,7 +1,6 @@
-[![Animation2.gif](https://i.postimg.cc/jqwhk88f/Animation2.gif)](https://postimg.cc/kDC82yPM)
 
 # Getting Started with Create React App
-
+[![Animation2.gif](https://i.postimg.cc/jqwhk88f/Animation2.gif)](https://postimg.cc/kDC82yPM)
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
