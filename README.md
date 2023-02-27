@@ -1,4 +1,4 @@
-[Animation2.gif](https://postimg.cc/kDC82yPM)
+[url=https://postimg.cc/kDC82yPM][img]https://i.postimg.cc/kDC82yPM/Animation2.gif[/img][/url]
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
