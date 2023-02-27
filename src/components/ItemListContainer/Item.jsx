@@ -21,7 +21,7 @@ const Item = ({prod}) => {
 
 
   return (
-
+     
     <Element name='cartas'  className={` cards card ${isFlipped ? "flipped" : ""}`} onClick={handleClick}  key={prod.id}>
       <div className="front">
         <img src={prod.img} alt={prod.name} />
@@ -33,7 +33,7 @@ const Item = ({prod}) => {
         <img className='back__img' src="../../img/productos/cardback.png" alt={prod.name} />
       </div>
     </Element>
-
+  
   )
 }
 export default Item

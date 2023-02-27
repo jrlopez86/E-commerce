@@ -11,7 +11,7 @@ const ItemDetail = ({ poke }) => {
      <div  className='detalle' >
        <img src={poke.img} alt={poke.name} />
        <h3 className="detalle__titulo">Nombre: {poke.name}</h3>
-       <p>Precio <span className="cards__precio">${poke.price}</span></p>
+       <p className="detalle__parrafo" >Precio <span className="cards__precio">${poke.price}</span></p>
        <p className="detalle__parrafo">Tipo: {poke.type}</p>
        <p className="detalle__parrafo">Hp: <span style={{ color: 'green' }}>{poke.Hp}</span></p>
        <p className="detalle__parrafo">Ataque: <span style={{ color: 'green' }}>{poke.Attack}</span></p>

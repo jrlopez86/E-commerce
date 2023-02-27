@@ -9,9 +9,11 @@
 	align-content: center;
 	margin-left: auto;
 	margin-right: auto;
+
+	&__titulo {
+		font-size: 26px;
+		color: white;
+	}
+
 }
 
-.detalle__titulo {
-	font-size: 26px;
-    color: white;
-}

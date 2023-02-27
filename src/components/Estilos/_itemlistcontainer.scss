@@ -8,13 +8,13 @@
 		text-align: initial;
 		top: 6px;
 		position: relative;
+		color: white;
 	}
 
 	&__carrito {
 		position: relative;
 		left: 5px;
-	}
-	
+	}	
 }
 
 .cards {
@@ -23,36 +23,30 @@
 	border: 3px solid hotpink;
 	padding: 20px;
 	border-radius: 25px;
+
+	&__titulo,
+	&__precio{
+		color: white;
+	}
+
+	&__detalles{
+		margin-top: 8px;
+		position: relative;
+		left: 3px;
+	  }
+
 }
 
-.cards__titulo {
+.detalle__parrafo {
 	color: white;
 }
 
-.cards__precio {
-	color: white;
-}
 
-p {
-	color: white;
-}
 
-.boton__count {
-	color: white;
-}
-
-.cards__detalles{
-	margin-top: 8px;
-	position: relative;
-	left: 3px;
-  }
 
   .card {
 	position: relative;
 	background-color:  black;
-
-
-
 	perspective: 1000px;
   }
   
