@@ -23,7 +23,7 @@ const NavBar = () => {
             <div className='flex-row-reverse collapse navbar-collapse' id='navbarNavAltMarkup'>
               <div className='navBarMod__a navbar-nav'>
                 <Link className='nav-link' to={'/'}>Inicio</Link>
-                <ScrollLink className='nav-link' activeClass='active' to='cartas' spy={true} smooth={true} offset={-1200} duration={500}>Cartas</ScrollLink >
+                <ScrollLink className='nav-link' to='cartas' smooth={true} duration={500}>Cartas</ScrollLink>
               <ul className="menu">
                   <li><Link className='nav-link' to=''>Categoría</Link>
                     <ul>

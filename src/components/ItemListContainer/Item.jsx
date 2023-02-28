@@ -22,7 +22,7 @@ const Item = ({prod}) => {
 
   return (
      
-    <Element name='cartas'  className={` cards card ${isFlipped ? "flipped" : ""}`} onClick={handleClick}  key={prod.id}>
+    <div id='cartas'  className={` cards card ${isFlipped ? "flipped" : ""}`} onClick={handleClick}  key={prod.id}>
       <div className="front">
         <img src={prod.img} alt={prod.name} />
         <h3  className="cards__titulo">{prod.name}</h3>
@@ -32,7 +32,7 @@ const Item = ({prod}) => {
         <div className="back">
         <img className='back__img' src="../../img/productos/cardback.png" alt={prod.name} />
       </div>
-    </Element>
+    </div>
   
   )
 }
