@@ -26,9 +26,11 @@
 
 
 
-	&__titulo,
-	&__precio{
+	&__titulo{
 		color: white;
+	}
+	&__precio {
+		color: hotpink;
 	}
 
 	&__detalles{

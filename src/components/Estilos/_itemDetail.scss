@@ -1,19 +1,29 @@
 .detalle {
 	display: flex;
-	flex-direction: column;
 	border: 3px solid hotpink;
 	padding: 20px;
 	border-radius: 25px;
-	width: 296px;
-	justify-content: center;
+	width: 39%;
 	align-content: center;
 	margin-left: auto;
 	margin-right: auto;
 
 	&__titulo {
 		font-size: 26px;
-		color: white;
+		color: hotpink;
 	}
 
 }
 
+.detalle__text {
+	margin-left: 50px;
+}
+
+.detalle__parrafo-precio {
+	font-size: 20px;
+	color: hotpink;
+}
+
+hr {
+	color: hotpink;
+}

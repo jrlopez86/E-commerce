@@ -1,7 +1,7 @@
 import React from 'react'
 import ItemListContainer from './ItemListContainer';
 
-const main = () => {
+const Main = () => {
   return (
     <main>
       <ItemListContainer />
@@ -9,4 +9,4 @@ const main = () => {
   )
 }
 
-export default main
+export default Main
