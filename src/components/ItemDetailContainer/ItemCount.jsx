@@ -1,8 +1,11 @@
 import React, { useState } from 'react'
+import { useCartContext } from '../../Context/CartContext';
 
 
 
 const ItemCount = ({ stock, initial, onAdd }) => {
+
+  const { addToCart } = useCartContext();
   
     const [count, setCount] = useState(initial)
 
@@ -26,8 +29,8 @@ const ItemCount = ({ stock, initial, onAdd }) => {
       <button  onClick={restar} type="button" className="btn btn-outline-primary">-</button>
       <span className='boton__count'>{count}</span>
       <button  onClick={sumar} type="button" className="btn btn-outline-primary">+</button>
-      <button   onClick={() => onAdd(count)} type="button" className="btn btn-outline-primary boton__carrito">Agregar al carrito</button>
-    </div>
+      <button onClick={() => { onAdd(count); addToCart();}} type="button" className="btn btn-outline-primary boton__carrito">  Agregar al carrito</button>  
+  </div>
     </>
 
    

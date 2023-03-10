@@ -10,6 +10,14 @@ export const useCartContext = () => useContext(CartContext)
 const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([])
 
+  // Nos dice el precio total
+  const totalPrice = () => {
+    return cart.reduce((prev, act) => prev + act.quantity * act.price, 0);
+  }
+
+  //Cuantos productos tengo en total
+  const totalProducts = () => cart.reduce((acumulador, productoActual) => acumulador + productoActual.quantity, 0);
+
   // 1) Vaciar carrito.
   const clearCart = () => {
     setCart([]);
@@ -21,11 +29,7 @@ const CartProvider = ({ children }) => {
   }
 
   // 3) Eliminar un producto del carrito.
-  const removeProduct = (id) => {
-    const newCartItems = cart.filter((cart) => cart.id !== id)
-    setCart(newCartItems);
-  }
-
+  const removeProduct = (id) => setCart(cart.filter(product => product.id !== id))
 
    // 4) Agregar un producto al carrito.
    const addProduct = (item, quantity) => {
@@ -40,10 +44,20 @@ const CartProvider = ({ children }) => {
   console.log('carrito', cart);
 
   return (
-    <CartContext.Provider value={{ clearCart, isInCart, removeProduct, addProduct }}>
-     {children}
+    <CartContext.Provider
+      value={{
+        clearCart,
+        isInCart,
+        removeProduct,
+        addProduct,
+        totalPrice,
+        totalProducts,
+        cart
+      }}
+    >
+      {children}
     </CartContext.Provider>
-  )
+  );
 }
 
 export default CartProvider

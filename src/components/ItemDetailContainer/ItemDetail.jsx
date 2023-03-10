@@ -6,7 +6,8 @@ import { useCartContext } from '../../Context/CartContext';
 
 
 
-const ItemDetail = React.memo(({ poke }) => {
+
+const ItemDetail = ({ poke }) => {
 
   const [goToCart, setGoToCart] = useState(false)
   const {addProduct} = useCartContext();
@@ -35,5 +36,5 @@ const ItemDetail = React.memo(({ poke }) => {
      </div>
    </>
  );
-});
+};
 export default ItemDetail
