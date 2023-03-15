@@ -6,8 +6,7 @@ import Cart from '../src/components/Cart/Cart';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 import { BrowserRouter, Routes, Route} from 'react-router-dom';
 import CartProvider from './Context/CartContext';
-
-
+// import OrderForm from './components/Firebase/OrderForm';
 
 
 
@@ -22,6 +21,7 @@ function App() {
           <Route exact path="/item/:id" element={<ItemDetailContainer />} />
           <Route exact path="/categorias/:type" element={<Main />}/>
           <Route exact path='/cart' element={<Cart />}/>
+          {/* <Route exact path='/form' element={<OrderForm />}/> */}
         </Routes>
         </CartProvider>
         <Footer />

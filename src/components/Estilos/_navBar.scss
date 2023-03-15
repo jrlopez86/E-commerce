@@ -68,17 +68,28 @@
       
       
         &__texto h1 {
+          font-family: 'Pokemon Solid', sans-serif;
           font-size: 3.5rem;
           margin-bottom: 3rem;
+          background-image: linear-gradient(to right, #F7FF00, #FFD500);
+          -webkit-background-clip: text;
+          -moz-background-clip: text;
+          background-clip: text;
+          color: transparent;
         }
+        
+        
       
       
         &__img {
           position: absolute;
-          max-width: 31.25rem;
-          right: 2.5rem;
-          top: 12.5rem;
+          right: 5.5rem;
+          top: 9.5rem;
+          box-shadow: 0px 0px 10px rgba(0,0,0,.9);
+          border-radius: 10px;
+          width: 44%;
         }
+        
 
 
 
@@ -87,6 +98,7 @@
   
   .navBarMod__banner {
       width: 100%;
+      border-radius: 10px;
   }
 
   @keyframes navbar__logo-spin {

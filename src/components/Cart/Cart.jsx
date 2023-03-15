@@ -1,15 +1,33 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useCartContext } from '../../Context/CartContext';
 import { Link } from 'react-router-dom';
 import ItemCart from './ItemCart';
-
+import { addDoc, collection, getFirestore } from  'firebase/firestore'
 
 
 const Cart = () => {
-  const { cart, totalPrice } = useCartContext();
+  const { cart, totalPrice, clearCart } = useCartContext();
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState('');
 
-
-
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const order = {
+      buyer: {
+        name: name,
+        email: email,
+        phone: phone
+      },
+      items: cart.map(product => ({id: product.id, name: product.name, price: product.price, quantity: product.quantity})),
+      total: totalPrice()
+    };
+    const db = getFirestore();
+    const ordersCollection = collection(db, 'orders');
+    addDoc(ordersCollection, order)
+    .then(({ id }) => console.log(id));
+  }
+  
   if (cart.length === 0) {
     return (
       <>
@@ -26,11 +44,27 @@ const Cart = () => {
      {
       cart.map(product => <ItemCart key={product.id} product={product} />)
      }
-     <p className="btn btn-success" style={{ pointerEvents: 'none', position: 'relative', left: '525px' }} >
-      TOTAL: {totalPrice()}
-     </p>
-     {/* <button type="button" class="btn btn-secondary">Vaciar Carrito</button> */}
+     <p className="detalle__precioTotal">TOTAL: <b style={{ marginLeft: '10px' }}>${totalPrice()}</b></p>
+     <div className="text-center">
+     <button onClick={() => {clearCart()}} type="button" className="btn btn-secondary" style={{ marginRight: '10px' }}>Vaciar</button>
 
+     <form className="cards" style={{ maxWidth: 800, margin: '0 auto' }}  onSubmit={handleSubmit}>
+      <p className="detalle__parrafo">Ingrese los datos para terminar la compra</p>
+       <div className="mb-3">
+         <label  htmlFor="name" className="form-label detalle__parrafo">Nombre</label>
+         <input type="text" className="form-control" id="name" value={name} onChange={(e) => setName(e.target.value)} required />
+       </div>
+       <div className="mb-3">
+         <label htmlFor="email" className="form-label detalle__parrafo">Email</label>
+         <input type="email" className="form-control" id="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
+       </div>
+       <div className="mb-3">
+         <label htmlFor="phone" className="form-label detalle__parrafo">Teléfono</label>
+         <input type="text" className="form-control" id="phone" value={phone} onChange={(e) => setPhone(e.target.value)} required />
+       </div>
+       <button type="submit" className="btn btn-success">Finalizar compra</button>
+     </form>
+     </div>
      </>
   );
 };

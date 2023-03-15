@@ -42,7 +42,7 @@ const NavBar = () => {
 
         <div className='contenedor'>
           <div className='contenedor__texto'> 
-              <h1>POKEMON TRADING CARDS</h1>
+              <h1>POKÉMON TRADING CARDS</h1>
               <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste, explicabo praesentium vel eligendi ratione sint nobis tenetur quos sequi, expedita atque aut quasi dicta temporibus sed neque dolorum? Exercitationem, beatae?</p>
           </div>
           <Banner />

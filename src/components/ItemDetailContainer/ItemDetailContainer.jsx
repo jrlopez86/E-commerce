@@ -14,8 +14,11 @@ const [poke, setPoke] = useState({})
 const {id}= useParams()
 
 useEffect(() => {
-  getProducts()
-  .then(res => setPoke(res.find((item)=> item.id === parseInt(id))))
+  const querydb = getFirestore();
+  const queryDoc = doc(querydb, 'items', id );
+  getDoc(queryDoc)
+  .then(res => setPoke({id: res.id, ...res.data()}))
+
 }, [id]);
 
 
