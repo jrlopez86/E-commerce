@@ -32,14 +32,13 @@ const ItemDetail = ({ poke }) => {
        <p className="detalle__parrafo">V.defensa: <span style={{ color: 'green' }}>{poke.spDef}</span></p>
        <p className="detalle__parrafo">Velocidad: <span style={{ color: 'green' }}>{poke.speed}</span></p>
        { goToCart ? 
-  <div>
-    <Link className="btn btn-primary boton__carrito" to='/cart'>Terminar Compra</Link>
-    <Link className="btn btn-info boton__carrito" to='/' style={{ marginTop: '10px' }}>¡Ver más cartas!</Link>
-  </div>
-  :
-  <ItemCount stock={poke.stock} initial={0} onAdd={onAdd} />
-}
-
+      <div className="d-flex flex-row mb-3">
+        <Link className="btn btn-primary boton__carrito" to='/cart'>Terminar Compra</Link>
+        <Link className="btn btn-info boton__carrito" to='/'>¡Ver más cartas!</Link>
+      </div>
+      :
+      <ItemCount stock={poke.stock} initial={0} onAdd={onAdd} />
+      }
        </div>
      </div>
    </>

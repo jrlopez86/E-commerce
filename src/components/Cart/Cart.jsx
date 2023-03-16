@@ -40,33 +40,37 @@ const Cart = () => {
   }
 
   return (
-     <>
-     {
-      cart.map(product => <ItemCart key={product.id} product={product} />)
-     }
-     <p className="detalle__precioTotal">TOTAL: <b style={{ marginLeft: '10px' }}>${totalPrice()}</b></p>
-     <div className="text-center">
-     <button onClick={() => {clearCart()}} type="button" className="btn btn-secondary" style={{ marginRight: '10px' }}>Vaciar</button>
+    <>
+<div style={{ display: 'flex', justifyContent: 'center', gap: '50px', marginBottom: '50px', position: 'relative', bottom: '50px' }}>
+        <div>
+          {cart.map(product => <ItemCart key={product.id} product={product} />)}
+          <button onClick={() => {clearCart()}} type="button" className="btn btn-secondary" style={{ display: 'block', margin: '0 auto', marginTop: '15px' }}>Borrar todo</button>
 
-     <form className="cards" style={{ maxWidth: 800, margin: '0 auto' }}  onSubmit={handleSubmit}>
-      <p className="detalle__parrafo">Ingrese los datos para terminar la compra</p>
-       <div className="mb-3">
-         <label  htmlFor="name" className="form-label detalle__parrafo">Nombre</label>
-         <input type="text" className="form-control" id="name" value={name} onChange={(e) => setName(e.target.value)} required />
-       </div>
-       <div className="mb-3">
-         <label htmlFor="email" className="form-label detalle__parrafo">Email</label>
-         <input type="email" className="form-control" id="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
-       </div>
-       <div className="mb-3">
-         <label htmlFor="phone" className="form-label detalle__parrafo">Teléfono</label>
-         <input type="text" className="form-control" id="phone" value={phone} onChange={(e) => setPhone(e.target.value)} required />
-       </div>
-       <button type="submit" className="btn btn-success">Finalizar compra</button>
-     </form>
-     </div>
-     </>
+        </div>
+        <div style={{ marginLeft: '20px' }}>
+          <form className="formCards" style={{ maxWidth: 800 }}  onSubmit={handleSubmit}>
+            <p className="detalle__parrafo" style={{ textAlign: 'center' }}>Ingrese los datos para terminar la compra</p>
+            <div className="mb-3">
+              <label  htmlFor="name" className="form-label detalle__parrafo">Nombre</label>
+              <input type="text" className="form-control" id="name" value={name} onChange={(e) => setName(e.target.value)} required />
+            </div>
+            <div className="mb-3">
+              <label htmlFor="email" className="form-label detalle__parrafo">Email</label>
+              <input type="email" className="form-control" id="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
+            </div>
+            <div className="mb-3">
+              <label htmlFor="phone" className="form-label detalle__parrafo">Teléfono</label>
+              <input type="text" className="form-control" id="phone" value={phone} onChange={(e) => setPhone(e.target.value)} required />
+            </div>
+            <button type="submit" className="btn btn-success">Finalizar compra</button>
+          </form>
+          <p className="detalle__precioTotal">TOTAL: <b style={{ marginLeft: '10px' }}>${totalPrice()}</b></p>
+
+        </div>
+      </div>
+    </>
   );
+  
 };
 
 export default Cart;
