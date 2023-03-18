@@ -1,56 +1,52 @@
 ![Animation](https://user-images.githubusercontent.com/102810730/221572787-607e1192-dd8c-4306-a192-0f9f1da6b00c.gif)
 
 
-# E-commerce pokémon trading cards
+E-commerce Pokémon Trading Cards
 
-Bienvenido a pokemon trading cards, web de compra de cartas.
+¡Bienvenido a Pokémon Trading Cards, la página web de compra de cartas!
+Características
 
-# Caracteristicas
+    Catálogo de productos
+    Carrito de compras
+    Filtrado por tipo
+    Formulario para el proceso de pago
+    Confirmación de la compra
 
-- Catalogo de productos 
-- Carritos de compras
-- Filtrado por tipo
-- Formulario para el proceso de pago
-- Confirmacion de la compra
+Requisitos previos
 
-# Requisitos previos 
+    Node.js 18.15.0 o superior
+    NPM 8.19.4 o superior
 
-- Node js 18.15.0 o superior
-- NPM 8.19.4 o superior
+Instalación
 
-# Instalacion
+    Clonar el repositorio.
+    Instalar las dependencias dentro del repositorio con el comando: npm install.
+    Configurar...
+    Iniciar con el comando: npm start.
 
-1) Clonar el repositorio
-2) Dentro del repositorio instalar las dependencias: 'npm install'
-3) Configurar...
-4) Iniciar con 'npm start'
+Uso
 
-# Uso
+    Acceder a la aplicación en localhost:3000.
+    Buscar y agregar productos al carrito.
+    Completar la información personal.
+    Confirmar el pedido.
 
-1) Acceder a la aplicacion en 'localhost:3000'
-2) Buscar y agregar productos al carrito
-3) Completar la informacion personal
-4) Confirmar pedido
+Contribución
 
-# Contribución
+Toda contribución es bienvenida. Para contribuir, sigue estos pasos:
 
-Toda contribucion es bienvenida, les dejo los pasos:
+    Crea un fork del proyecto y trabaja en tu propio repositorio.
+    Crea una rama nueva para tu contribución.
+    Realiza tus cambios y haz los commits correspondientes.
+    Haz un push a tu rama y crea una solicitud de extracción (pull request) con una descripción clara y concisa de tus cambios.
+    Espera la revisión y discusión del pull request.
+    Una vez aprobado, se fusionará tu contribución al proyecto.
 
-   1) Crea un fork del proyecto y trabaja en tu propio repositorio.
-   2) Crea una rama nueva para tu contribución.
-   3) Realiza tus cambios y haz los commits correspondientes.
-   4) Haz un push a tu rama y crea un pull request con una descripción clara y concisa de tus cambios.
-   5) Espera la revisión y discusión del pull request.
-   6) Una vez aprobado, se fusionará tu contribución al proyecto.
+Agradecimientos
 
-# Agradecimientos
+A los compañeros de la cursada, a los tutores y al docente.
+Estado del proyecto
 
-A los compañeros de la cursada a los tutores y al docente.
-
-# Estado del proyecto
-
-Finalizado para la entrega del curso de React js, sin embargo quedan varios cosas para pulir una de ellas la maquetacion.
-
-
+El proyecto ha sido finalizado para la entrega del curso de React.js, aunque quedan varias cosas por pulir, entre ellas, la maquetación.
 
 
