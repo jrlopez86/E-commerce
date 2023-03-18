@@ -3,7 +3,7 @@
 
 # E-commerce pokémon trading cards
 
-#Bienvenido a pokemon trading cards, web de compra de cartas.
+Bienvenido a pokemon trading cards, web de compra de cartas.
 
 # Caracteristicas
 
