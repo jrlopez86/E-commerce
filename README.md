@@ -3,9 +3,9 @@
 
 # E-commerce pokémon trading cards
 
-#Bienvenido a pokemon trading cards, web de compra de cartas.
+# Bienvenido a pokemon trading cards, web de compra de cartas.
 
-#Caracteristicas
+# Caracteristicas
 
 - Catalogo de productos 
 - Carritos de compras
@@ -25,7 +25,7 @@
 3) Configurar...
 4) Iniciar con 'npm start'
 
-#Uso
+# Uso
 
 1) Acceder a la aplicacion en 'localhost:3000'
 2) Buscar y agregar productos al carrito
