@@ -32,6 +32,25 @@ Bienvenido a pokemon trading cards, web de compra de cartas.
 3) Completar la informacion personal
 4) Confirmar pedido
 
+# Contribución
+
+Toda contribucion es bienvenida, les dejo los pasos:
+
+   1) Crea un fork del proyecto y trabaja en tu propio repositorio.
+   2) Crea una rama nueva para tu contribución.
+   3) Realiza tus cambios y haz los commits correspondientes.
+   4) Haz un push a tu rama y crea un pull request con una descripción clara y concisa de tus cambios.
+   5) Espera la revisión y discusión del pull request.
+   6) Una vez aprobado, se fusionará tu contribución al proyecto.
+
+# Agradecimientos
+
+A los compañeros de la cursada a los tutores y al docente.
+
+# Estado del proyecto
+
+Finalizado para la entrega del curso de React js, sin embargo quedan varios cosas para pulir una de ellas la maquetacion.
+
 
 
 
