@@ -6,12 +6,8 @@ import { Link } from 'react-router-dom'
 import { Link as ScrollLink  } from 'react-scroll';
 
 
-
-
-
 const NavBar = () => {
-
-
+  
   return (
       <header>
         <nav className='navBarMod navbar navbar-expand-lg bg-light'>
@@ -43,7 +39,7 @@ const NavBar = () => {
         <div className='contenedor'>
           <div className='contenedor__texto'> 
               <h1>POKÉMON TRADING CARDS</h1>
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste, explicabo praesentium vel eligendi ratione sint nobis tenetur quos sequi, expedita atque aut quasi dicta temporibus sed neque dolorum? Exercitationem, beatae?</p>
+              <p> Pokémon es un juego de cartas coleccionables en el que los jugadores utilizan cartas con imágenes de Pokémon, personajes y objetos para luchar contra su oponente. Cada jugador tiene una baraja de 60 cartas que contiene Pokémon, energía y cartas de entrenador.</p>
           </div>
           <Banner />
         </div>

@@ -3,7 +3,18 @@ import { useCartContext } from '../../Context/CartContext';
 import { Link } from 'react-router-dom';
 import ItemCart from './ItemCart';
 import { addDoc, collection, getFirestore } from  'firebase/firestore'
+import Swal from 'sweetalert2'
 
+
+
+
+const mostrarAlerta = () => {
+    Swal.fire(
+    'Gracias por tu compra',
+    'Se enviara a tu email los detalles',
+    'success'
+  )
+}
 
 const Cart = () => {
   const { cart, totalPrice, clearCart } = useCartContext();
@@ -25,8 +36,21 @@ const Cart = () => {
     const db = getFirestore();
     const ordersCollection = collection(db, 'orders');
     addDoc(ordersCollection, order)
-    .then(({ id }) => console.log(id));
+    .then(() => {
+    })
+    .catch((error) => {
+    console.error("Error al agregar el documento: ", error);
+    });
+  
+    // Limpiar los campos del formulario después de enviar la orden
+    setName('');
+    setEmail('');
+    setPhone('');
+    clearCart();
+    mostrarAlerta();
   }
+  
+  
   
   if (cart.length === 0) {
     return (
@@ -62,7 +86,7 @@ const Cart = () => {
               <label htmlFor="phone" className="form-label detalle__parrafo">Teléfono</label>
               <input type="text" className="form-control" id="phone" value={phone} onChange={(e) => setPhone(e.target.value)} required />
             </div>
-            <button type="submit" className="btn btn-success">Finalizar compra</button>
+            <button  type="submit" className="btn btn-success">Finalizar compra</button>
           </form>
           <p className="detalle__precioTotal">TOTAL: <b style={{ marginLeft: '10px' }}>${totalPrice()}</b></p>
 

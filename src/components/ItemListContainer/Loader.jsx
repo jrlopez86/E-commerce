@@ -2,7 +2,6 @@ import React from 'react'
 import { Waveform } from '@uiball/loaders'
 
 
-
 const Loader = () => {
     return (
       <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center',  margin: '0 auto'  }}>

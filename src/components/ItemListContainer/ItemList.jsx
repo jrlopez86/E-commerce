@@ -3,11 +3,6 @@ import Item from './Item';
 
 
 
-
-
-
-
-
 const ItemList = ({listaProductos}) => {
   return (
     <>

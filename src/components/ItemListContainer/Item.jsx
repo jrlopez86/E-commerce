@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
+import cardback from '../../img/cardback.png'
 import { Link } from 'react-router-dom'
-
 
 
 
@@ -16,9 +16,6 @@ const Item = ({prod}) => {
     event.stopPropagation();
   };
 
-
-
-
   return (
      
     <div id='cartas'  className={` cards card ${isFlipped ? "flipped" : ""}`} onClick={handleClick}  key={prod.id}>
@@ -29,7 +26,8 @@ const Item = ({prod}) => {
       
       </div>
         <div className="back">
-        <img className='back__img' src="../../img/productos/cardback.png" alt={prod.name} />
+        <img className='back__img' src={cardback} alt={prod.name} />
+
       </div>
     </div>
   
