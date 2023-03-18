@@ -4,7 +4,7 @@
 E-commerce Pokémon Trading Cards
 
 ¡Bienvenido a Pokémon Trading Cards, la página web de compra de cartas!
-Características
+# Características
 
     Catálogo de productos
     Carrito de compras
@@ -12,26 +12,26 @@ Características
     Formulario para el proceso de pago
     Confirmación de la compra
 
-Requisitos previos
+# Requisitos previos
 
     Node.js 18.15.0 o superior
     NPM 8.19.4 o superior
 
-Instalación
+# Instalación
 
     Clonar el repositorio.
     Instalar las dependencias dentro del repositorio con el comando: npm install.
     Configurar...
     Iniciar con el comando: npm start.
 
-Uso
+# Uso
 
     Acceder a la aplicación en localhost:3000.
     Buscar y agregar productos al carrito.
     Completar la información personal.
     Confirmar el pedido.
 
-Contribución
+# Contribución
 
 Toda contribución es bienvenida. Para contribuir, sigue estos pasos:
 
@@ -42,10 +42,11 @@ Toda contribución es bienvenida. Para contribuir, sigue estos pasos:
     Espera la revisión y discusión del pull request.
     Una vez aprobado, se fusionará tu contribución al proyecto.
 
-Agradecimientos
+# Agradecimientos
 
 A los compañeros de la cursada, a los tutores y al docente.
-Estado del proyecto
+
+# Estado del proyecto
 
 El proyecto ha sido finalizado para la entrega del curso de React.js, aunque quedan varias cosas por pulir, entre ellas, la maquetación.
 
