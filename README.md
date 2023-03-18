@@ -49,3 +49,8 @@ A los compañeros de la cursada, a los tutores y al docente.
 # Estado del proyecto
 
 El proyecto ha sido finalizado para la entrega del curso de React.js, aunque quedan varias cosas por pulir, entre ellas, la maquetación.
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cc22ea55dbf791d192c8373f8e513f0828243d71
